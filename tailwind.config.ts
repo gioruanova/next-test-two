@@ -3,10 +3,11 @@ import { type Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./app/**/*.{ts,tsx}",
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./styles/**/*.{css}" // incluye tus CSS Modules
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pokemons/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/shopping-cart/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {},

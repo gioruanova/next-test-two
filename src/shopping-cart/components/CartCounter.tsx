@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import style from "./counter.module.css";
 
 interface Props {
@@ -9,7 +9,6 @@ interface Props {
 
 export const CartCounter = ({ value = 10 }: Props) => {
   const [count, setCount] = useState(value);
-  const [status, setStatus] = useState("cursor-pointer");
 
   const addProducts = () => {
     setCount(count + 1);
@@ -19,13 +18,7 @@ export const CartCounter = ({ value = 10 }: Props) => {
     setCount(count > 0 ? count - 1 : 0);
   };
 
-  useEffect(() => {
-    if (count === 0) {
-      setStatus("disabled");
-    } else {
-      setStatus("");
-    }
-  }, [count]);
+
 
   return (
     <>
