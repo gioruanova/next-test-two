@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+.disabled {
+    cursor: default;
+    opacity: 0.2;
+    @apply text-gray-300;
+    text-decoration: none;
+}
+
+.disabled:hover {
+    @apply underline bg-gray-900;
+    text-decoration: none;
+}
