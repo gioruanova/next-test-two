@@ -12,8 +12,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pokemon = await getPokemon(id);
 
   try {
+    const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
     return {
-      title: `Pokémon #${pokemon.id} - ${pokemon.name}`,
+      title: `Pokémon #${pokemon.id} - ${capitalize(pokemon.name)}`,
       description: "Detalle del pokemon",
     };
   } catch (error) {
